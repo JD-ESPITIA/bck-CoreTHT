@@ -16,7 +16,7 @@ namespace AutosColombia.Controllers
     public class AutoController : ControllerBase
     {
         private readonly IAutoRepository _autoRepository;
-        private readonly int ejemplo;
+        private readonly string rutasFisicas;
 
         public AutoController(IAutoRepository autoRepository)
         {
