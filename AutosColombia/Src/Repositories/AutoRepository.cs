@@ -58,7 +58,7 @@ namespace AutosColombia.Src.Repositories
             itemToUpdate.FabricationDate = Auto.FabricationDate;
             itemToUpdate.Model = Auto.Model;
             itemToUpdate.Seating = Auto.Seating;
-
+            itemToUpdate.UrlPicture = Auto.UrlPicture;
 
             await _context.SaveChangesAsync();
         }

@@ -50,7 +50,8 @@ namespace AutosColombia.Controllers
                 Color = createAutoDto.Color,
                 FabricationDate = createAutoDto.FabricationDate,
                 Model = createAutoDto.Model,
-                Seating = createAutoDto.Seating
+                Seating = createAutoDto.Seating,
+                UrlPicture = createAutoDto.UrlPicture
             };
 
             await _autoRepository.Add(auto);
@@ -68,7 +69,8 @@ namespace AutosColombia.Controllers
                 Color = updateProductDto.Color,
                 FabricationDate = updateProductDto.FabricationDate,
                 Model = updateProductDto.Model,
-                Seating = updateProductDto.Seating
+                Seating = updateProductDto.Seating,
+                UrlPicture = updateProductDto.UrlPicture
             };
 
             await _autoRepository.Update(auto);

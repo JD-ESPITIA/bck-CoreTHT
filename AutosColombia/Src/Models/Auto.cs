@@ -13,5 +13,6 @@ namespace AutosColombia.Src.Models
         public string CarBrand { get; set; }
         public int Seating { get; set; }
         public string FabricationDate { get; set; }
+        public string UrlPicture { get; set; }
     }
 }
