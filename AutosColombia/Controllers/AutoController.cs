@@ -44,7 +44,7 @@ namespace AutosColombia.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateAuto(AutoDto createAutoDto)
         {
-            Auto auto= new()
+            Auto auto = new()
             {
                 CarBrand = createAutoDto.CarBrand,
                 Color = createAutoDto.Color,
@@ -55,7 +55,12 @@ namespace AutosColombia.Controllers
             };
 
             await _autoRepository.Add(auto);
-            return Ok();
+            return Ok(
+                new
+                {
+                    response = "Creado exitosamente"
+                }
+                );
         }
 
 
@@ -74,14 +79,24 @@ namespace AutosColombia.Controllers
             };
 
             await _autoRepository.Update(auto);
-            return Ok();
+            return Ok(
+                new
+                {
+                    response = "Actualizado exitosamente"
+                }
+                );
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAuto(int id)
         {
             await _autoRepository.Delete(id);
-            return Ok();
+            return Ok(
+                new
+                {
+                    response = "Eliminado exitosamente"
+                }
+                );
         }
     }
 }
